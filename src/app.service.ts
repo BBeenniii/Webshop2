@@ -5,7 +5,7 @@ import * as path from 'path';
 @Injectable()
 export class AppService {
   validateForm(name: string, bankAccount: string, termsAccepted: boolean): boolean {
-    const nameRegex = /\S+/;
+    const nameRegex = /\S+|^[a-zA-Z]+$/; 
     const accountRegex = /^(\d{8}-\d{8}|\d{8}-\d{8}-\d{8})$/;
 
     if (!nameRegex.test(name) || !accountRegex.test(bankAccount) || !termsAccepted) {
