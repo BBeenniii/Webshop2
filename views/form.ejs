@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizetési Adatok</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Kifizetési Adatok Megadása</h1>
+        <form action="/submit" method="POST">
+            <div class="mb-3">
+                <label for="name" class="form-label">Név</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="bankAccount" class="form-label">Bankszámlaszám</label>
+                <input type="text" class="form-control" id="bankAccount" name="bankAccount" required placeholder="12345678-12345678 vagy 12345678-12345678-12345678">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="termsAccepted" name="termsAccepted">
+                <label class="form-check-label" for="termsAccepted">Elfogadom a szerződési feltételeket</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Beküldés</button>
+        </form>
+    </div>
+</body>
+</html>
